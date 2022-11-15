@@ -42,7 +42,7 @@ import Pessoa from './pages/Pessoa';
 import Permissao from './pages/Permissao';
 import Produto from './pages/Produto';
 import Categoria from './pages/Categoria';
-import Marca from './pages/Marca';
+import Fabricante from './pages/Fabricante';
 import ProdutoImagens from './pages/ProdutoImagens';
 
 
@@ -182,7 +182,7 @@ const App = () => {
                 label: 'Cidades', icon: 'pi pi-fw pi-home', to: '/cidades'
             },
             {
-                label: 'Marcas', icon: 'pi pi-fw pi-home', to: '/marcas'
+                label: 'Fabricantes', icon: 'pi pi-fw pi-home', to: '/fabricantes'
             },
             {
                 label: 'Categorias', icon: 'pi pi-fw pi-home', to: '/categorias'
@@ -356,7 +356,7 @@ const App = () => {
                     <Route path="/documentation" component={Documentation} />
                     <Route path="/estados" component={Estado} />
                     <Route path="/cidades" component={Cidade} />
-                    <Route path="/marcas" component={Marca} />
+                    <Route path="/fabricantes" component={Fabricante} />
                     <Route path="/categorias" component={Categoria} />
                     <Route path="/produtos" component={Produto} />
                     <Route path="/permissoes" component={Permissao} />

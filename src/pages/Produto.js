@@ -12,7 +12,7 @@ import { Toolbar } from 'primereact/toolbar';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CategoriaService } from '../service/CategoriaService';
-import { MarcaService } from '../service/MarcaService';
+import { FabricanteService } from '../service/FabricanteService';
 import { ProdutoService } from '../service/ProdutoService';
 
 
@@ -38,12 +38,12 @@ const Produto = () => {
     const toast = useRef(null);
     const dt = useRef(null);
     const objetoService = new ProdutoService();
-    const marcaService = new MarcaService();
+    const fabricanteService = new FabricanteService();
     const categoriaService = new CategoriaService();
 
     useEffect(() => {
 
-        marcaService.listarTodos().then(res => {
+        fabricanteService.listarTodos().then(res => {
             setMarcas(res.data)
 
         });

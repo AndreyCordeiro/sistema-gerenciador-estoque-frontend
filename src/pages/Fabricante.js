@@ -7,9 +7,9 @@ import { InputText } from 'primereact/inputtext';
 import { Toast } from 'primereact/toast';
 import { Toolbar } from 'primereact/toolbar';
 import React, { useEffect, useRef, useState } from 'react';
-import { MarcaService } from '../service/MarcaService';
+import { FabricanteService } from '../service/FabricanteService';
 
-const Marca = () => {
+const Fabricante = () => {
     let objetoNovo = {
         nome: ''
     };
@@ -22,7 +22,7 @@ const Marca = () => {
     const [globalFilter, setGlobalFilter] = useState(null);
     const toast = useRef(null);
     const dt = useRef(null);
-    const objetoService = new MarcaService();
+    const objetoService = new FabricanteService();
 
     useEffect(() => {
         if (objetos == null) {
@@ -212,4 +212,4 @@ const comparisonFn = function (prevProps, nextProps) {
     return prevProps.location.pathname === nextProps.location.pathname;
 };
 
-export default React.memo(Marca, comparisonFn);
+export default React.memo(Fabricante, comparisonFn);
