@@ -15,9 +15,7 @@ import { CidadeService } from '../service/CidadeService';
 import { PermissaoService } from '../service/PermissaoService';
 import { PessoaService } from '../service/PessoaService';
 
-
 //{nome:'Frank', permissaoPessoas:[{permissao:{id:55}}]}
-
 const Pessoa = () => {
 
     let objetoNovo = {
@@ -174,7 +172,7 @@ const Pessoa = () => {
         return (
             <React.Fragment>
                 <div className="my-2">
-                    <Button label="Nova" icon="pi pi-plus" className="p-button-success mr-2" onClick={openNew} />
+                    <Button label="Adicionar Pessoa" icon="pi pi-plus" className="p-button-success mr-2" onClick={openNew} />
 
                 </div>
             </React.Fragment>
@@ -278,11 +276,6 @@ const Pessoa = () => {
                             <div className="field">
                                 <label htmlFor="endereco">Endereço</label>
                                 <InputText id="endereco" value={formik.values.endereco} onChange={formik.handleChange} />
-                            </div>
-
-                            <div className="field">
-                                <label htmlFor="cidade">Cidade</label>
-                                <Dropdown id="cidade" name="cidade" optionLabel="nome" value={formik.values.cidade} options={cidades} filter onChange={formik.handleChange} placeholder="Selecione uma Cidade" />
                             </div>
 
                             <div className="field">

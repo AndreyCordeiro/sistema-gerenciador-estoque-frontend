@@ -106,7 +106,7 @@ const Permissao = () => {
         return (
             <React.Fragment>
                 <div className="my-2">
-                    <Button label="Nova" icon="pi pi-plus" className="p-button-success mr-2" onClick={openNew} />
+                    <Button label="Adicionar Permissão" icon="pi pi-plus" className="p-button-success mr-2" onClick={openNew} />
 
                 </div>
             </React.Fragment>

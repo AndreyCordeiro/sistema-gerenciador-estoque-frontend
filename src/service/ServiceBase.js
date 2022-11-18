@@ -4,7 +4,7 @@ export class ServiceBase {
 
 
     constructor(urlBase) {
-        this.url = process.env.REACT_APP_URL_API + '/' + urlBase + '/';
+        this.url = 'http://localhost:8080/api/'+urlBase+'/'; 
     }
 
 
