@@ -171,16 +171,16 @@ const App = () => {
             label: 'Cadastros',
             items: [
                 {
-                    label: 'Fabricantes', icon: 'pi pi-fw pi-home', to: '/fabricantes'
+                    label: 'Fabricantes', icon: 'pi pi-building', to: '/fabricantes'
                 },
                 {
-                    label: 'Categorias', icon: 'pi pi-fw pi-home', to: '/categorias'
+                    label: 'Categorias', icon: 'pi pi-tags', to: '/categorias'
                 },
                 {
-                    label: 'Produtos', icon: 'pi pi-fw pi-home', to: '/produtos'
+                    label: 'Produtos', icon: 'pi pi-box', to: '/produtos'
                 },
                 {
-                    label: 'Permissões', icon: 'pi pi-fw pi-home', to: '/permissoes'
+                    label: 'Permissões', icon: 'pi pi-lock-open', to: '/permissoes'
                 }]
         },
         {
