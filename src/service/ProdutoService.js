@@ -1,20 +1,10 @@
 import axios from 'axios';
-import { ServiceBase } from './ServiceBase';
 
-export class ProdutoService extends ServiceBase {
-
-    constructor() {
-        super("produto");
-    }
-
+export class ProdutoService {
     url = 'http://localhost:8080/api/produto';
 
     listarTodos() {
         return axios.get(this.url);
-    }
-
-    buscarId(id) {
-        return axios.get(this.url + id);
     }
 
     inserir(objeto) {

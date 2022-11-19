@@ -1,21 +1,10 @@
 import axios from 'axios';
-import { ServiceBase } from './ServiceBase';
 
-export class CategoriaService extends ServiceBase {
-
-    constructor() {
-        super("categoria");
-    }
-
+export class CategoriaService {
     url = 'http://localhost:8080/api/categoria';
-
 
     listarTodos() {
         return axios.get(this.url);
-    }
-
-    buscarId(id) {
-        return axios.get(this.url + id);
     }
 
     inserir(objeto) {

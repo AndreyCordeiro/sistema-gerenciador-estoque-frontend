@@ -36,9 +36,6 @@ import TimelineDemo from './pages/TimelineDemo';
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
 
-import Estado from './pages/Estado';
-import Cidade from './pages/Cidade';
-import Pessoa from './pages/Pessoa';
 import Permissao from './pages/Permissao';
 import Produto from './pages/Produto';
 import Categoria from './pages/Categoria';
@@ -175,12 +172,7 @@ const App = () => {
         },
         {
             label: 'Cadastros',
-            items: [{
-                label: 'Estados', icon: 'pi pi-fw pi-home', to: '/estados'
-            },
-            {
-                label: 'Cidades', icon: 'pi pi-fw pi-home', to: '/cidades'
-            },
+            items: [
             {
                 label: 'Fabricantes', icon: 'pi pi-fw pi-home', to: '/fabricantes'
             },
@@ -192,9 +184,6 @@ const App = () => {
             },
             {
                 label: 'Permissões', icon: 'pi pi-fw pi-home', to: '/permissoes'
-            },
-            {
-                label: 'Pessoas', icon: 'pi pi-fw pi-home', to: '/pessoas'
             }]
         },
         {
@@ -354,13 +343,10 @@ const App = () => {
                     <Route path="/crud" component={Crud} />
                     <Route path="/empty" component={EmptyPage} />
                     <Route path="/documentation" component={Documentation} />
-                    <Route path="/estados" component={Estado} />
-                    <Route path="/cidades" component={Cidade} />
                     <Route path="/fabricantes" component={Fabricante} />
                     <Route path="/categorias" component={Categoria} />
                     <Route path="/produtos" component={Produto} />
                     <Route path="/permissoes" component={Permissao} />
-                    <Route path="/pessoas" component={Pessoa} />
                     <Route path="/produtoImagens/:id" component={ProdutoImagens} />
 
                 </div>

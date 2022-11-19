@@ -1,12 +1,6 @@
 import axios from 'axios';
-import { ServiceBase } from './ServiceBase';
 
-export class ProdutoImagensService extends ServiceBase {
-
-    constructor() {
-        super("produtoImagens");
-    }
-
+export class ProdutoImagensService {
     uploadImagens(obj) {
         const formData = new FormData();
         formData.append('idProduto', obj.idProduto);
