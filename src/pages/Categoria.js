@@ -8,6 +8,7 @@ import {Toolbar} from 'primereact/toolbar';
 import {Dialog} from 'primereact/dialog';
 import {InputText} from 'primereact/inputtext';
 import {CategoriaService} from '../service/CategoriaService';
+import ColunaOpcoes from "../components/ColunaOpcoes";
 
 const Categoria = () => {
     let objetoNovo = {
@@ -170,7 +171,9 @@ const Categoria = () => {
                                globalFilter={globalFilter} emptyMessage="Sem objetos cadastrados." header={header} responsiveLayout="scroll">
                         <Column field="id" header="ID" sortable body={idBodyTemplate} headerStyle={{width: '14%', minWidth: '10rem'}}></Column>
                         <Column field="nome" header="Nome" sortable body={nomeBodyTemplate} headerStyle={{width: '14%', minWidth: '10rem'}}></Column>
-                        <Column body={actionBodyTemplate}></Column>
+                        <Column body={rowData => {
+                            return <ColunaOpcoes rowData={rowData} editObjeto={editObjeto} confirmDeleteObjeto={confirmDeleteObjeto}/>
+                        }}></Column>
                     </DataTable>
 
                     <Dialog visible={objetoDialog} style={{width: '450px'}} header="Cadastrar/Editar" modal className="p-fluid" footer={objetoDialogFooter} onHide={hideDialog}>

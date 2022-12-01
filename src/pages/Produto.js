@@ -13,6 +13,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {CategoriaService} from '../service/CategoriaService';
 import {FabricanteService} from '../service/FabricanteService';
 import {ProdutoService} from '../service/ProdutoService';
+import ColunaOpcoes from "../components/ColunaOpcoes";
 
 
 const Produto = () => {
@@ -229,7 +230,9 @@ const Produto = () => {
                         <Column field="descricao" header="Descrição" sortable body={descricaoBodyTemplate} headerStyle={{width: '14%', minWidth: '10rem'}}></Column>
                         <Column field="valorCusto" header="Valor de Custo" sortable body={valorCustoBodyTemplate} headerStyle={{width: '14%', minWidth: '10rem'}}></Column>
                         <Column field="valorVenda" header="Valor de Venda" sortable body={valorVendaBodyTemplate} headerStyle={{width: '14%', minWidth: '10rem'}}></Column>
-                        <Column body={actionBodyTemplate}></Column>
+                        <Column body={rowData => {
+                            return <ColunaOpcoes rowData={rowData} editObjeto={editObjeto} confirmDeleteObjeto={confirmDeleteObjeto}/>
+                        }}></Column>
                     </DataTable>
 
                     <Dialog visible={objetoDialog} style={{width: '450px'}} header="Cadastrar/Editar" modal className="p-fluid" footer={objetoDialogFooter} onHide={hideDialog}>
