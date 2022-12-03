@@ -28,6 +28,8 @@ import './assets/demo/Demos.scss';
 import './assets/layout/layout.scss';
 import './App.scss';
 import Usuario from "./pages/Usuario";
+import Venda from "./pages/Venda";
+import Cliente from "./pages/Cliente";
 
 
 const App = () => {
@@ -163,6 +165,12 @@ const App = () => {
                 {
                     label: 'Usuários', icon: 'pi pi-users', to: '/usuarios'
                 },
+                {
+                    label: 'Clientes', icon: 'pi pi-shopping-bag', to: '/clientes'
+                },
+                {
+                    label: 'Vendas', icon: 'pi pi-wallet', to: '/vendas'
+                },
             ]
         }
     ];
@@ -211,6 +219,8 @@ const App = () => {
                     <Route path="/produtos" component={Produto}/>
                     <Route path="/permissoes" component={Permissao}/>
                     <Route path="/usuarios" component={Usuario}/>
+                    <Route path="/vendas" component={Venda}/>
+                    <Route path="/clientes" component={Cliente}/>
                 </div>
 
                 <AppFooter layoutColorMode={layoutColorMode}/>
